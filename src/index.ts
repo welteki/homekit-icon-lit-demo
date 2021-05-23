@@ -2,6 +2,10 @@ import "./styles.css";
 
 import "./components/outlet-icon";
 import "./components/desklamp-icon";
+import "./components/bulb-icon";
+import "./components/fan-icon";
+import "./components/lamp-icon";
+import "./components/floorlamp-icon";
 import "./components/toggle-switch";
 
 const app = document.getElementById("app");

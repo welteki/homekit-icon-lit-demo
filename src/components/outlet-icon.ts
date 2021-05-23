@@ -1,18 +1,9 @@
-import { LitElement, html, css } from "lit";
-import { customElement, property } from "lit/decorators";
+import { html } from "lit";
+import { customElement } from "lit/decorators";
+import { Icon } from "./icon";
 
 @customElement("outlet-icon")
-export class OutletIcon extends LitElement {
-  static styles = css`
-    svg {
-      height: inherit;
-      width: inherit;
-    }
-  `;
-
-  @property({ type: Boolean })
-  active?: boolean;
-
+export class OutletIcon extends Icon {
   render() {
     return html`
       <svg

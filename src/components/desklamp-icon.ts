@@ -1,18 +1,9 @@
-import { LitElement, html, css } from "lit";
-import { customElement, property } from "lit/decorators";
+import { html } from "lit";
+import { customElement } from "lit/decorators";
+import { Icon } from "./icon";
 
 @customElement("desklamp-icon")
-export class DesklampIcon extends LitElement {
-  static styles = css`
-    svg {
-      height: inherit;
-      width: inherit;
-    }
-  `;
-
-  @property({ type: Boolean })
-  active?: boolean;
-
+export class DesklampIcon extends Icon {
   render() {
     return html`
       <svg

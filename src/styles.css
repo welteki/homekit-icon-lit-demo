@@ -31,6 +31,13 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.container-dark {
+  background: #ffffff;
+}
+
+.container-light {
   background: #a6a6a6;
 }
 

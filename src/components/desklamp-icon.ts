@@ -4,6 +4,27 @@ import { Icon } from "./icon";
 
 @customElement("desklamp-icon")
 export class DesklampIcon extends Icon {
+  constructor() {
+    super();
+
+    const theme = {
+      bulb_active: "#FFCC01",
+      bulb_inactive: "#C3C4C7",
+    };
+
+    this.darkTheme = {
+      ...theme,
+      fixture_active: "#35ABDD",
+      fixture_inactive: "#9699A0",
+    };
+
+    this.ligthTheme = {
+      ...theme,
+      fixture_active: "#FFFFFF",
+      fixture_inactive: "#FFFFFF",
+    };
+  }
+
   render() {
     return html`
       <svg
@@ -17,13 +38,17 @@ export class DesklampIcon extends Icon {
           <g id="desk-Lamp">
             <!-- fixture -->
             <use
-              fill=${this.active ? "#FFFFFF" : "#9699A0"}
+              fill=${this.active
+                ? this.palette.fixture_active
+                : this.palette.fixture_inactive}
               transform="translate(43)"
               xlink:href="#path0_fill"
             />
             <!-- bulb -->
             <use
-              fill=${this.active ? "#FFCC01" : "#C3C4C7"}
+              fill=${this.active
+                ? this.palette.bulb_active
+                : this.palette.bulb_inactive}
               transform="translate(65.707 9.779)"
               xlink:href="#path1_fill"
             />

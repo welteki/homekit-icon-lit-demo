@@ -4,6 +4,24 @@ import { Icon } from "./icon";
 
 @customElement("outlet-icon")
 export class OutletIcon extends Icon {
+  constructor() {
+    super();
+
+    this.darkTheme = {
+      frame_active: "#D2D1D7",
+      frame_inactive: "#9699A0",
+      plug_holes_active: "#737373",
+      plug_holes_inactive: "#9699A0",
+    };
+
+    this.ligthTheme = {
+      frame_active: "#FFFFFF",
+      frame_inactive: "#C3C4C7",
+      plug_holes_active: "#FFFFFF",
+      plug_holes_inactive: "#C3C4C7",
+    };
+  }
+
   render() {
     return html`
       <svg
@@ -17,7 +35,9 @@ export class OutletIcon extends Icon {
           <g id="outlet">
             <!-- frame -->
             <use
-              fill=${this.active ? "#FFFFFF" : "#C3C4C7"}
+              fill=${this.active
+                ? this.palette.frame_active
+                : this.palette.frame_inactive}
               transform="translate(20 13)"
               xlink:href="#path0_fill"
             />
@@ -29,7 +49,9 @@ export class OutletIcon extends Icon {
             />
             <!-- plug holes -->
             <g
-              fill=${this.active ? "#FFFFFF" : "#C3C4C7"}
+              fill=${this.active
+                ? this.palette.plug_holes_active
+                : this.palette.plug_holes_inactive}
               transform="translate(31.333 25)"
             >
               <use xlink:href="#path2_fill" />

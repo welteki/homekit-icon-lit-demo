@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Parcel Sandbox</title>
+    <title>Lit HomeKit Icons</title>
     <meta charset="UTF-8" />
   </head>
 
   <body>
-    <div id="app">
-      <example-element />
+    <div class="wrapper">
+      <div class="frame">
+        <p>HomeKit Icons</p>
+        <div class="icon-container">
+          <outlet-icon class="icon" active />
+        </div>
+      </div>
     </div>
 
     <script src="src/index.ts"></script>

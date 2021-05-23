@@ -1,3 +1,3 @@
 import "./styles.css";
 
-import "./components/example-element"
+import "./components/outlet-icon";
